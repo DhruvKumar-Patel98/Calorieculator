@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:padding="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#CEC3BEBE"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_marginBottom="4dp"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp"
+            
+            />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imageView"
+            android:text="Line 1"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/imageView" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:text="Line 2"
+            android:textSize="15sp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textcalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="220dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:text="100 cal"
+            android:textSize="16dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="2dp"
+            android:textColor="#FF9800"
+            android:visibility="invisible"
+            android:layout_toRightOf="@+id/imageView" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

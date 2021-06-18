@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BreakfastListview"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewAPI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp">
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/apiresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textSize="30dp"
+            android:visibility="gone"/>
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/breakfastList"
+        android:paddingTop="30dp"
+        />
+</LinearLayout>

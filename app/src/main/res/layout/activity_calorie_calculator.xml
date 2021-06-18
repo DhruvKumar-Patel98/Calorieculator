@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".calorieCalculator">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/btnBreackfast"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:background="#F6F6F6"
+            android:drawableStart="@drawable/ic_breakfast"
+            android:drawableLeft="@drawable/ic_breakfast"
+            android:gravity="center"
+            android:text="Breakfast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/breakfastCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnBreackfast"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/btnBreackfast"
+            app:layout_constraintTop_toBottomOf="@+id/btnBreackfast" />
+
+        <Button
+            android:id="@+id/btnLunch"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnBreackfast"
+            android:layout_margin="40dp"
+            android:background="#F6F6F6"
+            android:drawableStart="@drawable/ic_lunch"
+            android:drawableLeft="@drawable/ic_lunch"
+            android:text="Lunch"
+            app:layout_constraintEnd_toEndOf="@+id/btnBreackfast"
+            app:layout_constraintStart_toStartOf="@+id/btnBreackfast"
+            app:layout_constraintTop_toBottomOf="@+id/btnBreackfast" />
+
+        <TextView
+            android:id="@+id/lunchCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/breakfastCalories"
+            app:layout_constraintStart_toStartOf="@+id/breakfastCalories"
+            app:layout_constraintTop_toBottomOf="@+id/btnLunch" />
+
+        <Button
+            android:id="@+id/clickBtnSnack"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLunch"
+            android:layout_margin="40dp"
+            android:background="#F6F6F6"
+            android:drawableStart="@drawable/ic_snack"
+            android:drawableLeft="@drawable/ic_snack"
+            android:text="Snacks"
+            app:layout_constraintEnd_toEndOf="@+id/btnLunch"
+            app:layout_constraintStart_toStartOf="@+id/btnLunch"
+            app:layout_constraintTop_toBottomOf="@+id/btnLunch" />
+
+        <TextView
+            android:id="@+id/snackCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/lunchCalories"
+            app:layout_constraintStart_toStartOf="@+id/lunchCalories"
+            app:layout_constraintTop_toBottomOf="@+id/clickBtnSnack" />
+
+
+        <Button
+            android:id="@+id/btnDinner"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/clickBtnSnack"
+            android:layout_margin="40dp"
+            android:background="#F6F6F6"
+            android:drawableStart="@drawable/ic_dinner"
+            android:drawableLeft="@drawable/ic_dinner"
+            android:text="Dinner"
+            app:layout_constraintEnd_toEndOf="@+id/clickBtnSnack"
+            app:layout_constraintStart_toStartOf="@+id/clickBtnSnack"
+            app:layout_constraintTop_toBottomOf="@+id/clickBtnSnack" />
+
+
+        <TextView
+            android:id="@+id/dinnerCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/snackCalories"
+            app:layout_constraintStart_toStartOf="@+id/snackCalories"
+            app:layout_constraintTop_toBottomOf="@+id/btnDinner" />
+
+        <TextView
+
+            android:id="@+id/resiveResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnDinner"
+            app:layout_constraintHorizontal_bias="0.549"
+            app:layout_constraintStart_toStartOf="@+id/btnDinner"
+            app:layout_constraintTop_toBottomOf="@+id/btnDinner"
+            app:layout_constraintVertical_bias="0.211" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>
