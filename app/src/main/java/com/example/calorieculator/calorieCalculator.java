@@ -11,12 +11,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 public class calorieCalculator extends AppCompatActivity {
     private Button btnsnacklist;
     private Button btndinnerlist;
     private Button btnBreakfastList;
     private Button btnLunchList;
 
+    private AdView mAdView;
     String bfResult,lResult,sResult,dResult,finalresult;
     double totalResult;
 
@@ -26,6 +35,55 @@ public class calorieCalculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calorie_calculator);
+
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                super.onAdLoaded();
+
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+                super.onAdFailedToLoad(adError);
+                mAdView.loadAd(adRequest);
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+                super.onAdOpened();
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+                super.onAdClicked();
+
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+        });
+
+
 
         TextView breakfastTextview = findViewById(R.id.breakfastCalories);
         bfResult= String.valueOf(clickBreakfastlist.breakfastCalories);

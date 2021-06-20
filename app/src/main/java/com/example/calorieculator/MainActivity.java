@@ -15,7 +15,6 @@ import java.util.TimerTask;
 
 
 public class MainActivity extends AppCompatActivity {
- //   private ImageButton button;
 
 
     Timer timer;
@@ -23,13 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // button=(ImageButton) findViewById(R.id.calorie);
-        //button.setOnClickListener(new View.OnClickListener() {
-          //  @Override
-           // public void onClick(View view) {
-            //    openCalorieCalculator();
-           // }
-       // });
+
 
         timer=new Timer();
         timer.schedule(new TimerTask() {
@@ -42,9 +35,5 @@ public class MainActivity extends AppCompatActivity {
         },2500);
 
     }
-  //  public void openCalorieCalculator()
-   // {
-     //   Intent intent=new Intent(this,calorieCalculator.class);
-       // startActivity(intent);
-    //}
+
 }
