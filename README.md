@@ -4,4 +4,4 @@ Application will calculate the day-to-day calorie intake. User can know how much
 For Users:-
 -Anyone can download this project for there reference purpose.
 -User can't COPY this project.
--Any query use can mail me at pateldhruv9726@gmail.com
+-Any query, user can mail me at pateldhruv9726@gmail.com
